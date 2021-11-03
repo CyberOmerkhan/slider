@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.carusel_container{
+    width: 38%;
+    border: solid 5px black;
+}
+.carusel_container img{
+    display: block;
+    width: 100%;
+}
+.carusel_slide{
+    display: flex;
+    height: 400px;
+    overflow: hidden;
+}
+.btn{
+    padding: 20px 35px;
+    border-radius: 50%;
+    background: tomato;
+    font-size: 35px;
+    cursor: pointer;
+    outline: none;
+    border: solid 1px #555;
+}
+.transformAnimation{
+    transition: 0.4s all ease-in-out;
+}
