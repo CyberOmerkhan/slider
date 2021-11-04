@@ -1,8 +1,9 @@
 const images = document.querySelectorAll('.slider-line img');
 const sliderLine = document.querySelector('.slider-line');
-let width = 0, offset = 0;
+let width = 0, offset = 0, height = 0;
 images.forEach(photo => {
     width += photo.width;
+    height += photo.height;
 })
 sliderLine.style.width = `${width}px`;
 sliderLine.style.height = images[0].height;
