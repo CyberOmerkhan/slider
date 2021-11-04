@@ -7,14 +7,14 @@ images.forEach(photo => {
 sliderLine.style.width = `${width}px`;
 sliderLine.style.height = images[0].height;
 document.querySelector('.slider-next').addEventListener('click', () => {
-    offset += -images[0].width;
+    offset = offset - images[0].width;
     if(-offset >= width){
         offset = 0;
     }
     sliderLine.style.left = `${offset}px`;
 });
 document.querySelector('.slider-prev').addEventListener('click', () => {
-    offset += images[0].width;
+    offset = offset + images[0].width;
     if(offset > 0){
         offset = -width + images[0].width;
     }
