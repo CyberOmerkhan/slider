@@ -1,21 +1,23 @@
-window.onload = function(){
-    const left = document.querySelector('.btnLeft');
-    const right = document.querySelector('.btnRight');
-    const slider = document.querySelector('.carusel_slide');
-    const images = document.querySelectorAll('.carusel_slide img');
-    let counter = 0;
-    const stepSize = images[0].clientWidth;
-    slider.style.transform = `translateX(${-stepSize * counter}px)`;
-    right.addEventListener('click', () => {
-        slider.classList.add('transformAnimation');
-        counter++;
-        slider.style.transform = `translateX(${-stepSize * counter}px)`;
-        counter >= images.length-1 ? (counter = -1) : null;
-    });
-    left.addEventListener('click', () => {
-        if(counter <= 0)
-            counter = images.length;
-        counter--;
-        slider.style.transform = `translateX(${-stepSize * counter}px)`;
-    })
-}
+const images = document.querySelectorAll('.slider-line img');
+const sliderLine = document.querySelector('.slider-line');
+let width = 0, offset = 0;
+images.forEach(photo => {
+    width += photo.width;
+})
+sliderLine.style.width = `${width}px`;
+sliderLine.style.height = images[0].height;
+document.querySelector('.slider-next').addEventListener('click', () => {
+    offset += -images[0].width;
+    if(-offset >= width){
+        offset = 0;
+    }
+    sliderLine.style.left = `${offset}px`;
+});
+document.querySelector('.slider-prev').addEventListener('click', () => {
+    offset += images[0].width;
+    if(offset > 0){
+        offset = -width + images[0].width;
+    }
+    sliderLine.style.left = `${offset}px`;
+    console.log(offset);
+});
