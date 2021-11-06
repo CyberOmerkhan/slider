@@ -1,8 +1,10 @@
 $(() => {
     let width = $('img')[0].width;
-    let clicker = 0;
+    let counter = 0;
+    let offset = 0;
     $('#btnLeft').bind('click', () => {
-        $('.slider img').css('left', '256px');
+        ++clicker;
+        offset = counter;
     })
     $('.slider').css('overflow', 'hidden');
 })
