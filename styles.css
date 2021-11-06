@@ -19,8 +19,8 @@
     border: solid 2px #000;
 }
 .slider img{
-    height: 256px;
-    width: 256px;
+    height: 250px;
+    width: 250px;
     background: tomato;
     position: relative;
 }
