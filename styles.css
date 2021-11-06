@@ -24,10 +24,7 @@
     background: tomato;
     position: relative;
 }
-.btns{
-    
-}
-.btn{
+#btnLeft, #btnRight{
     padding: 10px;
     cursor: pointer;
     background-color: #f3f3f3;
