@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding :0;
+    box-sizing: border-box;
+}
+.wrap{
+    width: 500px;
+    height: 500px;
+}
+.slider{
+    height: 256px;
+    width: 256px;
+    display: flex;
+    border: solid 2px #000;
+}
+.slider img{
+    height: 256px;
+    width: 256px;
+    background: tomato;
+}
