@@ -7,5 +7,7 @@ $(() => {
         offset -= images[0].width * counter;
         document.querySelector('.slider_line').style.left = `${offset}px`;
         offset = 0;
+        if(counter >= images.length - 1)
+            counter = -1;
     })
 })
