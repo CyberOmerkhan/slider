@@ -10,6 +10,11 @@
     width: 256px;
     height: 256px;
     border: solid 2px #000;
+    margin: 30px auto;
+}
+.slider_line{
+    display: flex;
+    height: 256px;
 }
 .slider img{
     width: 256px;
