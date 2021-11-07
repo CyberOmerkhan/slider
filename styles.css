@@ -11,11 +11,13 @@
     height: 256px;
     border: solid 2px #000;
     margin: 30px auto;
+    overflow: hidden;
 }
 .slider_line{
     display: flex;
     height: 256px;
     position: relative;
+    transition: ease 1s;
 }
 .slider img{
     width: 256px;

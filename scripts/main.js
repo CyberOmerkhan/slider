@@ -7,10 +7,18 @@ $(() => {
     });
     $('#btnRight').bind('click', () => {
         offset -= images[0].width;
-        document.querySelector('.slider_line').style.left = `${offset}px`;
+        $('.slider_line').css('left', `${offset}px`, 2000);
         if(offset < -768)
             offset = 0;
-            document.querySelector('.slider_line').style.left = `${offset}px`;
+            $('.slider_line').css('left', `${offset}px`, 2000);
         console.log(offset);
     });
+    $('#btnLeft').bind('click', () => {
+        offset += images[0].width;
+        $('.slider_line').css('left', `${offset}px`, 2000);
+        if(offset > 0)
+            offset = -summWidth + images[0].width;
+            $('.slider_line').css('left', `${offset}px`, 2000);
+        console.log(offset);
+    })
 })
